@@ -31,9 +31,53 @@ class Servicio extends Conexion
     }
 
 
+    // public function buscar(...$columnas){
+    //     $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
+    //     $sql = "SELECT $cols FROM servicios where ser_situacion = 1 ";
+
+
+    //     if($this->ser_cli_id != ''){
+    //         $sql .= " AND ser_cli_id = $this->ser_cli_id ";
+    //     }
+    //     if($this->ser_veh_id != ''){
+    //         $sql .= " AND ser_veh_id = $this->ser_cli_id ";
+    //     }
+    //     $resultado = self::servir($sql);
+    //     return $resultado;
+    // }
+
+    // public function buscar()
+    // {
+    //     $sql = "SELECT * from servicios and clientes and vehiculos where ser_situacion = 1 ";
+
+    //     if ($this->ser_cli_id != '') {
+    //         $sql .= " and ser_cli_id = '$this->cli_nombre' ";
+    //     }
+
+    //     if ($this->ser_veh_id != '') {
+    //         $sql .= " and ser_veh_id = '$this->veh_nombre' ";
+    //     }
+
+    //     if ($this->ser_fecha != '') {
+    //         $sql .= " and ser_fecha like '%$this->ser_fecha%' ";
+    //     }
+
+    //     if ($this->ser_descripcion != null) {
+    //         $sql .= " and ser_descripcion like '%$this->ser_descripcion%' ";
+    //     }
+
+    //     if ($this->ser_costo != null) {
+    //         $sql .= " and ser_costo like '%$this->ser_costo%' ";
+    //     }
+
+
+    //     $resultado = self::servir($sql);
+    //     return $resultado;
+    // }
+
     public function mostrarDatos()
     {
-        $sql = "SELECT ser_id, ser_cli_id,
+        $sql = "SELECT 
     servicios.ser_id AS ser_id, 
     clientes.cli_nombre AS ser_cli_id, 
     vehiculos.veh_marca AS ser_veh_id, 
@@ -53,38 +97,6 @@ WHERE
         $resultado = self::servir($sql);
         return $resultado;
     }
-
-    // public function buscar()
-    // {
-    //     $sql = "SELECT s.*, c.cli_nombre, v.veh_marca, v.veh_modelo 
-    //             FROM servicios s
-    //             INNER JOIN clientes c ON s.ser_cli_id = c.cli_id
-    //             INNER JOIN vehiculos v ON s.ser_veh_id = v.veh_id
-    //             WHERE s.ser_situacion = 1";
-
-    //     if ($this->ser_cli_id != '') {
-    //         $sql .= " AND s.ser_cli_id = '$this->ser_cli_id'";
-    //     }
-
-    //     if ($this->ser_veh_id != '') {
-    //         $sql .= " AND s.ser_veh_id = '$this->ser_veh_id'";
-    //     }
-
-    //     if ($this->ser_fecha != '') {
-    //         $sql .= " AND s.ser_fecha = '$this->ser_fecha'";
-    //     }
-
-    //     if ($this->ser_descripcion != '') {
-    //         $sql .= " AND s.ser_descripcion LIKE '%$this->ser_descripcion%'";
-    //     }
-
-    //     if ($this->ser_id != null) {
-    //         $sql .= " AND s.ser_id = '$this->ser_id'";
-    //     }
-
-    //     $resultado = self::servir($sql);
-    //     return $resultado;
-    // }
 
     public function modificar()
     {
