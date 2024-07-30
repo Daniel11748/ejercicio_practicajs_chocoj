@@ -5,7 +5,8 @@ include_once '../../includes/header.php'; ?>
 
 <div class="container mt-5">
     <div class="jumbotron text-center">
-        <h1 class="display-4">Bienvenidos a Nuestro TECNICENTRO ALFA</h1>
+
+        <h1 class="display-4">Bienvenidos TECNICENTRO AUTO</h1>
         <p class="lead">Ofrecemos una amplia gama de servicios para mantener su vehículo en perfecto estado.</p>
     </div>
 
