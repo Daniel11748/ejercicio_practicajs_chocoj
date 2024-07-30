@@ -18,11 +18,23 @@
 <div class="container mt-5 pt-5">
 
 <style>
- body {
+body {
     background-color: #d1d5f2; /* Color azul grisáceo oscuro */
     color: #333; /* Color del texto */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+.img-mosaic .img-container {
+    width: 100%;
+    height: 300px; /* Ajusta esta altura según tus necesidades */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.img-mosaic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto y llena el contenedor */
+}
+
 </style>
